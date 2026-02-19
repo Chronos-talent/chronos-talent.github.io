@@ -1,35 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chronos Talent - Global AI Job Platform</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { 
-            margin: 0; 
-            padding: 0; 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            overflow: hidden;
         }
-        .brand-bar {
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            z-index: 10;
+        }
+        .logo {
+            font-size: 2rem;
+        }
+        .title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            flex-grow: 1;
+        }
+        .domain-badge {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 0.5rem;
-            text-align: center;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
             font-size: 0.9rem;
-            display: none; /* Remove this line if you want to show the brand bar */
+            font-weight: 500;
         }
-        iframe { 
-            width: 100%; 
-            height: 100vh; 
-            border: none; 
-            display: block;
+        .iframe-container {
+            height: calc(100vh - 80px);
+            width: 100%;
+            background: white;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: white;
         }
     </style>
 </head>
 <body>
-    <iframe 
-        src="https://YOUR-ACTUAL-STREAMLIT-APP-URL/?embed=true" 
-        title="Chronos Talent - Global AI Jobs Platform">
-    </iframe>
+    <div class="header">
+        <span class="logo">🤖</span>
+        <span class="title">Chronos Talent - Global AI Job Platform</span>
+        <span class="domain-badge">chronostalent.is-an.ai</span>
+    </div>
+    <div class="iframe-container">
+        <iframe 
+            src="https://chronos-talent-owrcs4o8sire6epp6j2qbq.streamlit.app?embed=true" 
+            allow="geolocation; microphone; camera"
+            title="Chronos Talent Jobs Dashboard">
+        </iframe>
+    </div>
 </body>
 </html>
